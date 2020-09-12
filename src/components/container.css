@@ -1,0 +1,42 @@
+/*
+ * For Mobile (smaller screen sizes)
+ */
+div.container {
+    background-color: #012853;
+    width: 50vw;
+    height: 50vh;
+    margin: auto;
+    margin-top: -55%;
+    border-radius: 50px;
+    padding: 50px;
+}
+
+/*
+ * For Tablets (medium screen sizes)
+ */
+@media only screen and (min-width: 768px) {
+    div.container {
+        background-color: #012853;
+        width: 50vw;
+        height: 50vh;
+        margin: auto;
+        margin-top: -40%;
+        border-radius: 50px;
+        padding: 50px;
+    }
+}
+
+/*
+ * For Desktop (larger screen sizes)
+ */
+@media only screen and (min-width: 992px) {
+    div.container {
+        background-color: #012853;
+        width: 50vw;
+        height: 50vh;
+        margin: auto;
+        margin-top: -15%;
+        border-radius: 50px;
+        padding: 50px;
+    }
+}
