@@ -1,0 +1,92 @@
+
+/*
+ * For Mobile (small screen sizes)
+ */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+}
+
+img {
+    width: 30%;
+    border-radius: 25px;
+    margin: 0 0 0 0;
+}
+
+div.intro {
+    padding: 0 0 0 0;
+    margin: 10% 0 20% 0;
+    color: white;
+    flex: 1;
+    width: 50%;
+}
+
+div.intro h1 {
+    padding: 0 0 0 0;
+    margin: 0 0 0 15%;
+}
+
+div.cta {
+    flex: 1;
+    font-size: large;
+    margin: 0 0 0 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+div.cta button {
+    background: transparent;
+    color: white;
+    border-radius: 20px;
+    border: 2px solid white;
+    width: 200px;
+    height: 60px;
+}
+
+div.cta button:hover {
+    width: 210px;
+    height: 70px;
+    cursor: pointer;
+}
+
+/*
+ * For Tablets (medium screen sizes)
+ */
+@media only screen and (min-width: 768px) {
+    section {
+        flex-direction: row;
+    }
+}
+
+/*
+ * For Desktop (larger screen sizes)
+ */
+@media only screen and (min-width: 992px) {
+    section {
+        flex-direction: row;
+        /*background: rgba(0, 255, 0, 0.5);*/
+    }
+
+    img {
+        margin: 0 0 0 0;
+    }
+
+    div.cta {
+        margin: 20% 0 0 0;
+    }
+
+    div.intro {
+        padding: 0 0 0 0;
+        margin: 0 0 20% 0;
+        color: white;
+        flex: 1;
+    }
+
+    div.intro h1 {
+        padding: 0 0 0 0;
+        margin: 0 0 0 15%;
+    }
+}
