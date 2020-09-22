@@ -2,20 +2,30 @@ import React from "react";
 import './container.css';
 import Content1 from './content1';
 import Content2 from './content2';
+import Content3 from './content3';
 
 class Container extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            pageNumber: 1
-        }
+            pageNumber: props.pageNum,
+            pageHandler: props.pageHandler
+        };
+        console.log("State updated!");
     }
     contentSelector() {
-        if (this.state.pageNumber === 1) {
+        console.log(this.state.pageNumber + " - " + this.props.pageNum);
+        if (this.props.pageNum === 1) {
             return Content1;
         }
-        else {
+        else if (this.props.pageNum === 2){
             return Content2;
+        }
+        else if (this.props.pageNum === 3){
+            return Content3;
+        }
+        else {
+            return Content1;
         }
     }
     render() {
@@ -24,7 +34,7 @@ class Container extends React.Component {
             <div className="overlay">
                 <div className="container">
                     <div className="content">
-                        <Content />
+                        <Content pageHandler={this.state.pageHandler}/>
                     </div>
                 </div>
             </div>

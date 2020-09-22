@@ -1,0 +1,25 @@
+/*background: rgba(0, 255, 0, 0.5);*/
+
+div.content-container {
+    width: 100%;
+    height: 100%;
+    /*background: rgba(0, 255, 0, 0.5);*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section#content2 {
+    width: 100%;
+    height: 100%;
+    /*background: rgba(255, 0, 0, 0.5);*/
+}
+
+img.nextButton {
+    position: relative;
+    background-color: rgb(53,147,219);
+    border-radius: 50px;
+    width: 10%;
+    height: 20%;
+    right: -7.5%;
+}

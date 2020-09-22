@@ -2,7 +2,7 @@
 /*
  * For Mobile (small screen sizes)
  */
-section {
+section#content1 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,7 +56,7 @@ div.cta button:hover {
  * For Tablets (medium screen sizes)
  */
 @media only screen and (min-width: 768px) {
-    section {
+    section#content1 {
         flex-direction: row;
     }
 }
@@ -65,7 +65,7 @@ div.cta button:hover {
  * For Desktop (larger screen sizes)
  */
 @media only screen and (min-width: 992px) {
-    section {
+    section#content1 {
         flex-direction: row;
         /*background: rgba(0, 255, 0, 0.5);*/
     }
