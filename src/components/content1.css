@@ -10,6 +10,10 @@ section#content1 {
     width: 100%;
 }
 
+section#content1 h1 {
+    font-size: 2rem;
+}
+
 img {
     width: 30%;
     border-radius: 25px;
@@ -59,6 +63,10 @@ div.cta button:hover {
     section#content1 {
         flex-direction: row;
     }
+
+    section#content1 h1 {
+        font-size: 2.5rem;
+    }
 }
 
 /*
@@ -68,6 +76,10 @@ div.cta button:hover {
     section#content1 {
         flex-direction: row;
         /*background: rgba(0, 255, 0, 0.5);*/
+    }
+
+    section#content1 h1 {
+        font-size: 3rem;
     }
 
     img {

@@ -10,9 +10,32 @@ div.content-container {
 }
 
 section#content2 {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
     height: 100%;
     /*background: rgba(255, 0, 0, 0.5);*/
+}
+
+section#content2 h1 {
+    margin-bottom: 4%;
+    margin-top: 0;
+    color: white;
+    font-size: 2rem;
+
+}
+
+section#content2 p {
+    text-align: justify;
+    margin-top: 2%;
+    color: white;
+    font-size: 0.8rem;
+
+}
+
+section#content2 .optional {
+    display: none;
 }
 
 img.nextButton {
@@ -21,5 +44,80 @@ img.nextButton {
     border-radius: 50px;
     width: 10%;
     height: 20%;
-    right: -7.5%;
+    right: -10%;
+}
+
+section#content2 div.cta {
+    font-size: large;
+    margin: 0 0 0 0;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+section#content2 div.cta button {
+    background: transparent;
+    color: white;
+    border-radius: 20px;
+    border: 2px solid white;
+    width: 200px;
+    height: 60px;
+}
+
+section#content2 div.cta button:hover {
+    width: 210px;
+    height: 70px;
+    cursor: pointer;
+}
+
+/*
+ * For Tablets (medium screen sizes)
+ */
+@media only screen and (min-width: 768px) {
+    section#content2 {
+        width: 100%;
+    }
+
+    section#content2 h1 {
+        font-size: 2.5rem;
+    }
+
+    section#content2 p {
+        text-align: justify;
+        font-size: 0.6rem;
+    }
+
+    section#content2 .optional {
+        display: contents;
+    }
+}
+
+/*
+ * For Desktop (larger screen sizes)
+ */
+@media only screen and (min-width: 992px) {
+    section#content2 {
+        width: 100%;
+        /*background: rgba(0, 255, 0, 0.5);*/
+    }
+
+    section#content2 h1 {
+        font-size: 3rem;
+    }
+
+    section#content2 p {
+        text-align: justify;
+        font-size: 1rem;
+    }
+
+    section#content2 .optional {
+        display: contents;
+    }
+
+    img.nextButton {
+        right: -7.5%;
+    }
+
 }
