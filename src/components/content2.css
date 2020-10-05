@@ -1,5 +1,8 @@
 /*background: rgba(0, 255, 0, 0.5);*/
 
+/*
+ * For Mobile (small screen sizes)
+ */
 div.content-container {
     width: 100%;
     height: 100%;
@@ -62,13 +65,13 @@ section#content2 div.cta button {
     color: white;
     border-radius: 20px;
     border: 2px solid white;
-    width: 200px;
-    height: 60px;
+    width: 180px;
+    height: 40px;
 }
 
 section#content2 div.cta button:hover {
-    width: 210px;
-    height: 70px;
+    width: 190px;
+    height: 50px;
     cursor: pointer;
 }
 
@@ -91,6 +94,21 @@ section#content2 div.cta button:hover {
 
     section#content2 .optional {
         display: contents;
+    }
+
+    section#content2 div.cta button {
+        background: transparent;
+        color: white;
+        border-radius: 20px;
+        border: 2px solid white;
+        width: 200px;
+        height: 60px;
+    }
+
+    section#content2 div.cta button:hover {
+        width: 210px;
+        height: 70px;
+        cursor: pointer;
     }
 }
 
@@ -118,6 +136,21 @@ section#content2 div.cta button:hover {
 
     img.nextButton {
         right: -7.5%;
+    }
+
+    section#content2 div.cta button {
+        background: transparent;
+        color: white;
+        border-radius: 20px;
+        border: 2px solid white;
+        width: 200px;
+        height: 60px;
+    }
+
+    section#content2 div.cta button:hover {
+        width: 210px;
+        height: 70px;
+        cursor: pointer;
     }
 
 }
