@@ -22,9 +22,18 @@ section#content3 p {
 
 }
 
+section#content3 div.center-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 img#c-rank {
     width: 75%;
     content: url("https://www.codewars.com/users/alberthattingh/badges/micro");
+    margin-bottom: 2.5%;
+    margin-top: 2.5%;
 }
 
 img#c-rank:hover {
@@ -35,6 +44,10 @@ section#content3 table {
     width: 100%;
     color: white;
     font-size: 0.8rem;
+}
+
+section#content3 table td.rank {
+    text-align: right;
 }
 
 img.nextButton {
