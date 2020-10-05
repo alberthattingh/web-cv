@@ -1,0 +1,144 @@
+
+img.nextButton {
+    position: relative;
+    background-color: rgb(53,147,219);
+    border-radius: 50%;
+    width: 14vw;
+    height: 14vw;
+    right: -12.5%;
+}
+
+img.nextButton:hover {
+    cursor: pointer;
+    background-color: rgb(53,160,240);
+}
+
+section#content4 {
+    width: 100%;
+    height: 100%;
+    /*background: rgba(255, 0, 0, 0.5);*/
+}
+
+section#content4 h1 {
+    margin-bottom: 4%;
+    margin-top: 0;
+    color: white;
+    font-size: 3rem;
+}
+
+div.row-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+div.card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+    /*background: rgba(255, 0, 0, 0.5);*/
+
+}
+
+div.projects-container {
+    /*background: rgba(255, 0, 0, 0.5);*/
+    width: 100%;
+    margin-left: 2.5%;
+    /*margin-right: -5%;*/
+}
+
+img#avatar {
+    border-radius: 10%;
+    margin: 0;
+    padding: 0;
+    width: 20vw;
+}
+
+#username {
+    color: white;
+    font-size: 0.8rem;
+    padding: 0;
+    margin: 0;
+}
+
+#display-name {
+    color: white;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0.4rem 0 0;
+}
+
+@media only screen and (min-width: 444px) {
+    img.nextButton {
+        border-radius: 50%;
+        width: 12vw;
+        height: 12vw;
+        right: -16.5%;
+    }
+
+    #username {
+        font-size: 1rem;
+    }
+
+    #display-name {
+        font-size: 1.2rem;
+    }
+
+    div.row-box {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    img.nextButton {
+        border-radius: 50%;
+        width: 6vw;
+        height: 6vw;
+        right: -7.5%;
+    }
+
+    img#avatar {
+        border-radius: 10%;
+        margin: 0;
+        padding: 0;
+        width: 15vw;
+    }
+
+    #username {
+        font-size: 1rem;
+    }
+
+    #display-name {
+        font-size: 1.5rem;
+    }
+
+    div.row-box {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+}
+
+section#content4 .loader {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    right: 50%;
+}
+section#content4 .loader div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: loader 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+section#content4 .loader div:nth-child(2) {
+    animation-delay: -0.5s;
+}
