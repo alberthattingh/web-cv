@@ -8,15 +8,17 @@ function onRankClick() {
 
 function Content3(props) {
     const pageHandler = props.pageHandler;
-    const stats = JSON.parse(props.data);
+    const stats = Array.isArray(props.data) ? null : JSON.parse(props.data);
     const rows = [];
 
     if (stats != null) {
         const languages = stats['ranks']['languages'];
 
+        let count = 0;
         for (var lang in languages) {
-            rows.push(<tr><td>{lang.charAt(0).toUpperCase() + lang.slice(1)}</td>
+            rows.push(<tr key={count}><td>{lang.charAt(0).toUpperCase() + lang.slice(1)}</td>
                 <td className="rank">{languages[lang]["name"]}</td></tr>);
+            count++;
         }
     }
 
@@ -33,9 +35,7 @@ function Content3(props) {
                          src="https://www.codewars.com/users/alberthattingh/badges/micro"
                          alt="My Codewars rank"
                          onClick={onRankClick}/>
-                    <table>
-                        {rows}
-                    </table>
+                    {rows.length > 0 ? <table><tbody>{rows}</tbody></table> : <div className="loader"><div></div><div></div></div>}
                 </div>
             </section>
             <img src="https://img.icons8.com/ios/100/000000/circled-chevron-right.png"

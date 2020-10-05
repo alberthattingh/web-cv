@@ -3,6 +3,7 @@ import './container.css';
 import Content1 from './content1';
 import Content2 from './content2';
 import Content3 from './content3';
+import Content4 from "./content4";
 
 
 class Container extends React.Component {
@@ -15,6 +16,7 @@ class Container extends React.Component {
         };
         console.log("State updated!");
     }
+
     getCodewarsStats() {
         var myHeaders = new Headers();
         myHeaders.append("Authorization", "SXj4Pu9Xe7y6zt6R63Wp");
@@ -28,8 +30,30 @@ class Container extends React.Component {
         return fetch("https://alberts-backend.herokuapp.com/codewars", requestOptions)
             .then(response => response.text())
             .catch(error => console.log('error', error));
-
     }
+
+    getGithubProfileData() {
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+
+        return fetch("https://api.github.com/users/alberthattingh", requestOptions)
+            .then(response => response.text())
+            .catch(error => console.log('error', error));
+    }
+
+    getGithubRepoData() {
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+
+        return fetch("https://api.github.com/users/alberthattingh/repos", requestOptions)
+            .then(response => response.text())
+            .catch(error => console.log('error', error));
+    }
+
     contentSelector() {
         console.log(this.state.pageNumber + " - " + this.props.pageNum);
         if (this.props.pageNum === 1) {
@@ -41,42 +65,52 @@ class Container extends React.Component {
         else if (this.props.pageNum === 3){
             return Content3;
         }
+        else if (this.props.pageNum === 4){
+            return Content4;
+        }
         else {
             return Content1;
         }
     }
+
     componentDidMount() {
-        this.getCodewarsStats().then(response => {
-            this.setState({data: response});
-        })
+
     }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (this.props.pageNum === 3 && prevProps.pageNum !== 3) {
+            this.getCodewarsStats().then(response => {
+                this.setState({data: response})
+            });
+        }
+        else if (this.props.pageNum === 4 && prevProps.pageNum !== 4) {
+            let data_obj = [];
+            this.getGithubProfileData().then(response => {
+                data_obj.push(response);
+            }).then(() => {
+                this.getGithubRepoData().then(response => {
+                    data_obj.push(response);
+                }).then(() => {
+                    this.setState({data: data_obj})
+                })
+            });
+        }
+    }
+
     render() {
         const Content = this.contentSelector();
 
-        if (this.state.data === null) {
-            return(
-                <div className="overlay">
-                    <div className="container">
-                        <div className="content">
-                            <Content pageHandler={this.state.pageHandler}/>
-                        </div>
+        return(
+            <div className="overlay">
+                <div className="container">
+                    <div className="content">
+                        <Content
+                            pageHandler={this.state.pageHandler}
+                            data={this.state.data}/>
                     </div>
                 </div>
-            );
-        }
-        else {
-            return(
-                <div className="overlay">
-                    <div className="container">
-                        <div className="content">
-                            <Content
-                                pageHandler={this.state.pageHandler}
-                                data={this.state.data}/>
-                        </div>
-                    </div>
-                </div>
-            );
-        }
+            </div>
+        );
     }
 }
 // <div className="next-button"><img src="https://img.icons8.com/ios/64/000000/circled-chevron-right.png"/></div>
