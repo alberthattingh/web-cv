@@ -6,6 +6,37 @@ section#content3 {
     /*background: rgba(255, 0, 0, 0.5);*/
 }
 
+section#content3 h1 {
+    margin-bottom: 4%;
+    margin-top: 0;
+    color: white;
+    font-size: 2rem;
+
+}
+
+section#content3 p {
+    text-align: justify;
+    margin-top: 2%;
+    color: white;
+    font-size: 0.8rem;
+
+}
+
+img#c-rank {
+    width: 75%;
+    content: url("https://www.codewars.com/users/alberthattingh/badges/micro");
+}
+
+img#c-rank:hover {
+    cursor: pointer;
+}
+
+section#content3 table {
+    width: 100%;
+    color: white;
+    font-size: 0.8rem;
+}
+
 img.nextButton {
     position: relative;
     background-color: rgb(53,147,219);
@@ -36,6 +67,32 @@ img.nextButton:hover {
         height: 15%;
         right: -14.5%;
     }
+    img#c-rank {
+        content: url("https://www.codewars.com/users/alberthattingh/badges/large");
+    }
+    section#content3 h1 {
+        margin-bottom: 4%;
+        margin-top: 0;
+        color: white;
+        font-size: 2.5rem;
+
+    }
+    section#content3 p {
+        text-align: justify;
+        margin-top: 2%;
+        color: white;
+        font-size: 1rem;
+
+    }
+    img#c-rank {
+        width: 50%;
+        content: url("https://www.codewars.com/users/alberthattingh/badges/micro");
+    }
+    section#content3 table {
+        width: 50%;
+        color: white;
+        font-size: 1rem;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -53,6 +110,23 @@ img.nextButton:hover {
         width: 15%;
         height: 20%;
         right: -9.5%;
+    }
+    section#content3 h1 {
+         margin-bottom: 4%;
+         margin-top: 0;
+         color: white;
+         font-size: 3rem;
+
+    }
+    section#content3 p {
+        text-align: justify;
+        margin-top: 2%;
+        color: white;
+        font-size: 1rem;
+    }
+    img#c-rank {
+        width: 50%;
+        content: url("https://www.codewars.com/users/alberthattingh/badges/large");
     }
 }
 

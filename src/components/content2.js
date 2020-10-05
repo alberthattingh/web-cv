@@ -23,7 +23,7 @@ function Content2(props) {
                     Click the button below to download a PDF version of my resume and learn more about me.
                 </p>
                 <div className="cta">
-                    <a href={pdf} target="_blank"><button className="cta" onClick="">Download My Resume</button></a>
+                    <a href={pdf} target="_blank"><button className="cta" onClick={() => {}}>Download My Resume</button></a>
                 </div>
             </section>
             <img src="https://img.icons8.com/ios/100/000000/circled-chevron-right.png"
