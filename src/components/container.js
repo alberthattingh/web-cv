@@ -4,6 +4,8 @@ import Content1 from './content1';
 import Content2 from './content2';
 import Content3 from './content3';
 import Content4 from "./content4";
+import Content5 from "./content5";
+import Content6 from "./content6";
 
 
 class Container extends React.Component {
@@ -14,7 +16,7 @@ class Container extends React.Component {
             pageHandler: props.pageHandler,
             data: null
         };
-        console.log("State updated!");
+        // console.log("State updated!");
     }
 
     getCodewarsStats() {
@@ -55,7 +57,7 @@ class Container extends React.Component {
     }
 
     contentSelector() {
-        console.log(this.state.pageNumber + " - " + this.props.pageNum);
+        // console.log(this.state.pageNumber + " - " + this.props.pageNum);
         if (this.props.pageNum === 1) {
             return Content1;
         }
@@ -67,6 +69,12 @@ class Container extends React.Component {
         }
         else if (this.props.pageNum === 4){
             return Content4;
+        }
+        else if (this.props.pageNum === 5){
+            return Content5;
+        }
+        else if (this.props.pageNum === 6){
+            return Content6;
         }
         else {
             return Content1;

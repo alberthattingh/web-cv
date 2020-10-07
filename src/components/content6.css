@@ -1,0 +1,95 @@
+
+section#content6 {
+    width: 100%;
+    height: 100%;
+}
+
+section#content6 h1 {
+    margin-bottom: 4%;
+    margin-top: 0;
+    color: white;
+    font-size: 2rem;
+}
+
+section#content6 form {
+    width: 100%;
+    height: 100%;
+}
+
+section#content6 .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 1%;
+    color: white;
+    font-size: 0.8rem;
+}
+
+section#content6 input, section#content6 textarea {
+    margin-bottom: 2%;
+    width: 100%;
+}
+
+button.send-email {
+    min-width: fit-content;
+    background: transparent;
+    color: white;
+    border-radius: 20px;
+    border: 2px solid white;
+    width: 15%;
+    height: 10%;
+}
+
+button.send-email:hover {
+    width: 17%;
+    height: 12%;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 991px) {
+    img.nextButton {
+        position: relative;
+        background-color: rgb(53,147,219);
+        border-radius: 50%;
+        width: 14vw;
+        height: 14vw;
+        right: -20%;
+    }
+
+    img.nextButton:hover {
+        cursor: pointer;
+        background-color: rgb(53,160,240);
+    }
+
+    section#content6 input, section#content6 textarea {
+        margin-bottom: 8%;
+        width: 100%;
+    }
+
+    button.send-email {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    section#content6 input, section#content6 textarea {
+        margin-bottom: 2%;
+        width: 75%;
+    }
+
+    section#content6 h1 {
+        margin-bottom: 4%;
+        margin-top: 0;
+        color: white;
+        font-size: 3rem;
+    }
+
+    label {
+        margin-bottom: 1%;
+        color: white;
+        font-size: 1rem;
+    }
+}
+
