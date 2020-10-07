@@ -50,44 +50,16 @@ section#content3 table td.rank {
     text-align: right;
 }
 
-img.nextButton {
-    position: relative;
-    background-color: rgb(53,147,219);
-    border-radius: 50%;
-    width: 14vw;
-    height: 14vw;
-    right: -20.5%;
-}
-
-img.nextButton:hover {
-    cursor: pointer;
-    background-color: rgb(53,160,240);
-}
-
 @media only screen and (min-width: 444px) {
-    img.nextButton {
-        border-radius: 50%;
-        width: 12vw;
-        height: 12vw;
-        right: -16.5%;
-    }
+
 }
 
 @media only screen and (min-width: 556px) {
-    img.nextButton {
-        border-radius: 50%;
-        width: 10vw;
-        height: 10vw;
-        right: -14.5%;
-    }
-    img#c-rank {
-        content: url("https://www.codewars.com/users/alberthattingh/badges/large");
-    }
     section#content3 h1 {
         margin-bottom: 4%;
         margin-top: 0;
         color: white;
-        font-size: 2.5rem;
+        font-size: 2rem;
 
     }
     section#content3 p {
@@ -109,21 +81,11 @@ img.nextButton:hover {
 }
 
 @media only screen and (min-width: 768px) {
-    img.nextButton {
-        border-radius: 50%;
-        width: 8vw;
-        height: 8vw;
-        right: -14.5%;
-    }
+
 }
 
 @media only screen and (min-width: 992px) {
-    img.nextButton {
-        border-radius: 50%;
-        width: 8vw;
-        height: 8vw;
-        right: -9.5%;
-    }
+
     section#content3 h1 {
          margin-bottom: 4%;
          margin-top: 0;
@@ -144,12 +106,7 @@ img.nextButton:hover {
 }
 
 @media only screen and (min-width: 1294px) {
-    img.nextButton {
-        border-radius: 50%;
-        width: 5vw;
-        height: 5vw;
-        right: -7.5%;
-    }
+
 }
 
 section#content3 .loader {

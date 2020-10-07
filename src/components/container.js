@@ -1,5 +1,7 @@
 import React from "react";
 import './container.css';
+import './next_button.css';
+
 import Content1 from './content1';
 import Content2 from './content2';
 import Content3 from './content3';

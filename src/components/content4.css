@@ -1,18 +1,4 @@
 
-img.nextButton {
-    position: relative;
-    background-color: rgb(53,147,219);
-    border-radius: 50%;
-    width: 14vw;
-    height: 14vw;
-    right: -12.5%;
-}
-
-img.nextButton:hover {
-    cursor: pointer;
-    background-color: rgb(53,160,240);
-}
-
 section#content4 {
     width: 100%;
     height: 100%;
@@ -23,7 +9,7 @@ section#content4 h1 {
     margin-bottom: 4%;
     margin-top: 0;
     color: white;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 div.row-box {
@@ -72,13 +58,6 @@ img#avatar {
 }
 
 @media only screen and (min-width: 444px) {
-    img.nextButton {
-        border-radius: 50%;
-        width: 12vw;
-        height: 12vw;
-        right: -16.5%;
-    }
-
     #username {
         font-size: 1rem;
     }
@@ -95,11 +74,11 @@ img#avatar {
 }
 
 @media only screen and (min-width: 992px) {
-    img.nextButton {
-        border-radius: 50%;
-        width: 6vw;
-        height: 6vw;
-        right: -7.5%;
+    section#content4 h1 {
+        margin-bottom: 4%;
+        margin-top: 0;
+        color: white;
+        font-size: 3rem;
     }
 
     img#avatar {

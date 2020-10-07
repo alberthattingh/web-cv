@@ -1,0 +1,46 @@
+/*    background: rgba(0, 255, 0, 0.5);*/
+
+/*
+ * For Mobile (small screen sizes)
+ */
+img.nextButton {
+    position: relative;
+    background-color: rgb(53,147,219);
+    border-radius: 50%;
+    width: 14vw;
+    height: 14vw;
+    right: -20%;
+}
+
+img.nextButton:hover {
+    background-color: rgb(53,160,255);
+    cursor: pointer;
+}
+
+/*
+ * For Tablets (medium screen sizes)
+ */
+@media only screen and (min-width: 768px) {
+    img.nextButton {
+        position: relative;
+        background-color: rgb(53,147,219);
+        border-radius: 50%;
+        width: 14vw;
+        height: 14vw;
+        right: -12.5%;
+    }
+}
+
+/*
+ * For Desktop (larger screen sizes)
+ */
+@media only screen and (min-width: 992px) {
+    img.nextButton {
+        position: relative;
+        background-color: rgb(53,147,219);
+        border-radius: 50%;
+        width: 6vw;
+        height: 6vw;
+        right: -8%;
+    }
+}

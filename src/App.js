@@ -13,7 +13,7 @@ class App extends React.Component {
     // Handler to update page number and essentially the content shown
     pageHandler(page) {
         this.setState({pageNumber: page}, () => {
-            console.log("Click: " + this.state.pageNumber);
+            // console.log("Click: " + this.state.pageNumber);
         });
     }
 
