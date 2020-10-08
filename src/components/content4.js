@@ -10,6 +10,22 @@ function Portfolio(props) {
     const repos = JSON.parse(props.repos);
     let projects = [];
 
+    let name, link;
+    for (let r in repos) {
+        r = JSON.parse(r);
+
+        name = repos[r].name;
+        link = repos[r].html_url;
+
+        projects.push(
+            <li className="project" key={r}>
+                <a target="_blank" href={link} className="tooltip">
+                    {name.charAt(0)}<span className="tooltiptext">{name}</span>
+                </a>
+            </li>
+        );
+    }
+
 
     return(
         <div className="row-box">
@@ -19,6 +35,9 @@ function Portfolio(props) {
                 <h4 id="username">@{profile.login}</h4>
             </div>
             <div className="projects-container">
+                <p>
+                    Have a look at some of the projects I've worked on:
+                </p>
                 <ul id="projects">
                     {projects}
                 </ul>
