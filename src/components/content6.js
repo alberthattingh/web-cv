@@ -53,7 +53,7 @@ class Content6 extends React.Component {
         message += "\n\nYou can contact me at " + email;
         message = message.split(" ").join("+").split("\n").join("%0A");
 
-        let url = `http://alberts-backend.herokuapp.com/message?name=${name}&text=${message}`;
+        let url = `https://alberts-backend.herokuapp.com/message?name=${name}&text=${message}`;
 
         const requestOptions = {
             method: 'GET',
