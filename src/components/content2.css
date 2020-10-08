@@ -41,15 +41,6 @@ section#content2 .optional {
     display: none;
 }
 
-img.nextButton {
-    position: relative;
-    background-color: rgb(53,147,219);
-    border-radius: 50px;
-    width: 10%;
-    height: 20%;
-    right: -10%;
-}
-
 section#content2 div.cta {
     font-size: large;
     margin: 0 0 0 0;
@@ -65,7 +56,8 @@ section#content2 div.cta button {
     color: white;
     border-radius: 20px;
     border: 2px solid white;
-    width: 180px;
+    padding: 10px;
+    width: fit-content;
     height: 40px;
 }
 
@@ -132,10 +124,6 @@ section#content2 div.cta button:hover {
 
     section#content2 .optional {
         display: contents;
-    }
-
-    img.nextButton {
-        right: -7.5%;
     }
 
     section#content2 div.cta button {

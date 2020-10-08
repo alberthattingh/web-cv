@@ -49,20 +49,6 @@ button.send-email:hover {
 }
 
 @media only screen and (max-width: 991px) {
-    img.nextButton {
-        position: relative;
-        background-color: rgb(53,147,219);
-        border-radius: 50%;
-        width: 14vw;
-        height: 14vw;
-        right: -20%;
-    }
-
-    img.nextButton:hover {
-        cursor: pointer;
-        background-color: rgb(53,160,240);
-    }
-
     section#content6 input, section#content6 textarea {
         margin-bottom: 8%;
         width: 100%;
