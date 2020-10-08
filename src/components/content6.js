@@ -72,21 +72,40 @@ class Content6 extends React.Component {
             <div className="content-container">
                 <section id="content6">
                     <h1>Contact me</h1>
-                    <form id="contact-form" onSubmit={this.handleSubmit} method="GET">
-                        <div className="form-group">
-                            <label htmlFor="name">Name</label>
-                            <input type="text" className="form-control" value={this.state.name} onChange={this.handleNameChange} />
+                    <div className="main">
+                        <form id="contact-form" onSubmit={this.handleSubmit} method="GET">
+                            <div className="form-group">
+                                <label htmlFor="name">Name</label>
+                                <input type="text" className="form-control" value={this.state.name} onChange={this.handleNameChange} />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="exampleInputEmail1">Email address</label>
+                                <input type="email" className="form-control" aria-describedby="emailHelp" value={this.state.email} onChange={this.handleEmailChange} />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="message">Message</label>
+                                <textarea className="form-control" rows="5" value={this.state.message} onChange={this.handleMessageChange}></textarea>
+                            </div>
+                            <button type="submit" className="send-email">Submit</button>
+                        </form>
+                        <div className="socials">
+                            <a href="https://www.linkedin.com/in/albert-hattingh-54b252169/"
+                               className="fab fa-linkedin fa-5x"
+                               target="_blank"></a>
+                            <a href="https://github.com/alberthattingh"
+                               className="fab fa-github fa-5x"
+                               target="_blank"></a>
+                            <a href="mailto:ahattingh1@outlook.com"
+                               className="far fa-envelope fa-5x"
+                               target="_blank"></a>
+                            <a href="https://www.facebook.com/albert.hattingh.1238"
+                               className="fab fa-facebook-square fa-5x"
+                               target="_blank"></a>
+                            <a href="https://www.instagram.com/alberthattingh/?hl=en"
+                               className="fab fa-instagram fa-5x"
+                               target="_blank"></a>
                         </div>
-                        <div className="form-group">
-                            <label htmlFor="exampleInputEmail1">Email address</label>
-                            <input type="email" className="form-control" aria-describedby="emailHelp" value={this.state.email} onChange={this.handleEmailChange} />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="message">Message</label>
-                            <textarea className="form-control" rows="5" value={this.state.message} onChange={this.handleMessageChange}></textarea>
-                        </div>
-                        <button type="submit" className="send-email">Submit</button>
-                    </form>
+                    </div>
                 </section>
                 <img src="https://img.icons8.com/ios/100/000000/circled-chevron-right.png"
                      className="nextButton"
